@@ -17,7 +17,7 @@
         android:gravity="center"
         android:text="Registrasi"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/InputNamaLengkap"
+        app:layout_constraintBottom_toTopOf="@+id/LayoutInputNamaLengkap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.377" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/InputEmail"
+        android:id="@+id/LayoutInputEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -35,10 +35,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputNamaLengkap"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutInputNamaLengkap"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_eat"
@@ -47,7 +48,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/InputNamaLengkap"
+        android:id="@+id/LayoutInputNamaLengkap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -62,6 +63,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_user"
@@ -70,7 +72,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/InputNamaPengguna"
+        android:id="@+id/LayoutInputNamaPengguna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -80,10 +82,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutInputEmail"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_person"
@@ -92,7 +95,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/InputPass"
+        android:id="@+id/LayoutInputPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -102,10 +105,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputNamaPengguna"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutInputNamaPengguna"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_pass"
@@ -121,7 +125,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/InputPass"/>
+        app:layout_constraintTop_toBottomOf="@id/LayoutInputPass"/>
 
     <Button
         android:id="@+id/btn_signup"
@@ -131,7 +135,7 @@
         android:text="Daftar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InputPass"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutInputPass"
         android:backgroundTint="@color/hijau"/>
 
     <TextView

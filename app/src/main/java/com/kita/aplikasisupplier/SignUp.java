@@ -18,7 +18,7 @@ import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SignUp extends AppCompatActivity {
 
-    TextInputEditText infullname, inuser, inpass, inemail;
+    TextInputEditText textInputEditTextinfullname, textInputEditTextinuser, textInputEditTextinpass, textInputEditTextinemail ;
     Button buttonSignup;
     TextView textViewlogin;
     ProgressBar  progressBar;
@@ -28,22 +28,22 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        infullname = findViewById(R.id.InputNamaPengguna);
-        inuser = findViewById(R.id.InputNamaPengguna);
-        inpass = findViewById(R.id.InputPass);
-        inemail = findViewById(R.id.InputEmail);
+        textInputEditTextinfullname = findViewById(R.id.fullname);
+        textInputEditTextinuser = findViewById(R.id.username);
+        textInputEditTextinpass = findViewById(R.id.password);
+        textInputEditTextinemail = findViewById(R.id.email);
         buttonSignup = findViewById(R.id.btn_signup);
         textViewlogin = findViewById(R.id.textView3);
-
+        progressBar = findViewById(R.id.progress);
 
         buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String fullname, username, password, email;
-                fullname = String.valueOf(infullname.getText());
-                username = String.valueOf(inuser.getText());
-                password = String.valueOf(inpass.getText());
-                email = String.valueOf(inemail.getText());
+                fullname = String.valueOf(textInputEditTextinfullname.getText());
+                username = String.valueOf(textInputEditTextinuser.getText());
+                password = String.valueOf(textInputEditTextinpass.getText());
+                email = String.valueOf(textInputEditTextinemail.getText());
 
                 if (!fullname.equals("") && !username.equals("") && !password.equals("") && !email.equals("")) {
                     progressBar.setVisibility(View.VISIBLE);
@@ -51,12 +51,12 @@ public class SignUp extends AppCompatActivity {
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            String[] field = new String[2];
+                            String[] field = new String[4];
                             field[0] = "fullname";
                             field[1] = "username";
                             field[2] = "password";
                             field[3] = "email";
-                            String[] data = new String[2];
+                            String[] data = new String[4];
                             data[0] = fullname;
                             data[1] = username;
                             data[2] = password;
