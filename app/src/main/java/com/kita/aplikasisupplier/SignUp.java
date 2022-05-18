@@ -36,6 +36,15 @@ public class SignUp extends AppCompatActivity {
         textViewlogin = findViewById(R.id.textView3);
         progressBar = findViewById(R.id.progress);
 
+        textViewlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

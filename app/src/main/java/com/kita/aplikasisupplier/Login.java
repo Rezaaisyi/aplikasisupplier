@@ -19,8 +19,9 @@ public class Login extends AppCompatActivity {
 
     TextInputEditText textInputEditTextinuser, textInputEditTextinpass;
     Button buttonLogin;
-    TextView textViewlogin;
+    TextView textViewSignup;
     ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,17 @@ public class Login extends AppCompatActivity {
         textInputEditTextinpass = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progress);
+        textViewSignup = findViewById(R.id.textView3);
+
+
+        textViewSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
